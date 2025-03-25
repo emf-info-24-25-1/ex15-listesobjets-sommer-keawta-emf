@@ -55,6 +55,9 @@ public class ListePersonne_AvecTrous {
 
     public void afficher() {
         for (int i = 0; i < personnes.length; i++) {
+            if (personnes[i] == null) {
+                continue;
+            }
             System.out.println(personnes[i]);
         }
     }
