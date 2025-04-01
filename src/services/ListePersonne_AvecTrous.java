@@ -42,23 +42,22 @@ public class ListePersonne_AvecTrous {
     }
 
     public boolean supprimer(Personne p) {
-        boolean SupressionReussie = false;
+        boolean supressionReussie = false;
         for (int i = 0; i < personnes.length; i++) {
             if (personnes[i] == p) {
                 personnes[i] = null;
-                SupressionReussie = true;
+                supressionReussie = true;
                 break;
             }
         }
-        return SupressionReussie;
+        return supressionReussie;
     }
 
     public void afficher() {
         for (int i = 0; i < personnes.length; i++) {
-            if (personnes[i] == null) {
-                continue;
+            if (personnes[i] != null) {
+                System.out.println(personnes[i]);
             }
-            System.out.println(personnes[i]);
         }
     }
 }
